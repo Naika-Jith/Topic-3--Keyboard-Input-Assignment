@@ -20,8 +20,6 @@ namespace Topic_3__Keyboard_Input_Assignment
 
 
             //Part 1: Greeting
-
-            //FIX THIS PART/ DO BONUS!!!!!
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("Part 1: Greeting");
             Console.WriteLine();
@@ -43,20 +41,14 @@ namespace Topic_3__Keyboard_Input_Assignment
             Console.WriteLine("You are " + age + " years old.");
             Console.WriteLine();
 
-            Console.Write("What year were you born? ");
-            birthYear = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("You were born in " + birthYear + ".");
-            Console.WriteLine();
+           
+            currentYear = DateTime.Now.Year;
+            birthYear = currentYear - age;
 
-            Console.Write("What is the current year? ");
-            currentYear = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine();
             Console.WriteLine("The current year is " + currentYear + ".");
             Console.WriteLine();
-            
-            Console.WriteLine("Hello " + name + ", you are " + age + " years old, you were born in " + birthYear + ", and the current year is " + currentYear + ".");
+            Console.WriteLine("Hello " + name + ", you are " + age +  " years old, you were born in " + birthYear +", and the current year is " + currentYear + ".");
             Console.WriteLine();
-            //FIX THIS PART/ DO BONUS!!!!!
 
             //Part 2: Adder
 
@@ -99,13 +91,27 @@ namespace Topic_3__Keyboard_Input_Assignment
             Console.Write("Please enter the third distance: ");
             distance3 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine();
-            double average = (distance1 + distance2 + distance3) / 3;
-            Console.WriteLine("The average of " + distance1 + ", " + distance2 + ", and " + distance3 + " is " + average + ".");
+            averageDistance = (distance1 + distance2 + distance3) / 3;
+            Console.WriteLine("The average of " + distance1 + ", " + distance2 + ", and " + distance3 + " is " + averageDistance.ToString("F2") + ".");
+            Console.WriteLine();
 
             //Part 4: Hypotenuse
 
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Part 4: Hypotenuse");
+            Console.WriteLine();
 
-            
+            Console.Write("Enter the length of the first side of the triangle: ");
+            double side1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.Write("Enter the length of the second side of the triangle: ");
+            double side2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine();
+
+            double hypotenuse = Math.Sqrt(side1 * side1 + side2 * side2);
+
+            Console.WriteLine("The length of the hypotenuse is: " + hypotenuse.ToString("F2"));
 
 
 
